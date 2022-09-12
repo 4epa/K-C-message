@@ -255,6 +255,9 @@ SIDEBAR
   padding: 54px 45px;
   width: 100%;
   color: #fff;
+  font-family: "Circe";
+  font-weight: 700;
+  font-size: 1rem;
   background-color: #db914d;
   transition: all 0.2s ease 0s;
 }
@@ -329,8 +332,18 @@ MESSAGES
   transition: all 0.2s ease 0s;
   color: #fff;
 }
-.control-elements__button_orange {
-  color: #db914d;
+.control-elements__button_red {
+  color: #ff5b5c;
+}
+.control-elements__link {
+  color: #959595;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease 0s;
+}
+.control-elements__link:hover {
+  color: #ff5b5c;
 }
 .control-elements__button:hover {
   border-bottom: 1px solid #fff;
@@ -350,6 +363,7 @@ MESSAGES
   background-color: #15151500;
 }
 .header-message__input::placeholder {
+  text-align: end;
   font-size: 0.875rem;
   color: #db914d;
 }
@@ -417,6 +431,12 @@ MESSAGES
   justify-content: center;
   height: 40px;
   max-width: 40px;
+  position: relative;
+}
+.avatar__online-indicator {
+  position: absolute;
+  top: 0px;
+  right: 0px;
 }
 .message__sender-name {
   grid-area: name;
@@ -448,9 +468,12 @@ MESSAGES
   );
 }
 .message__data {
+  color: #959595;
   grid-area: data;
+  text-align: end;
 }
 .message__time {
+  color: #959595;
   grid-area: time;
   text-align: end;
 }
@@ -485,6 +508,7 @@ MESSAGES
     background-color: #15151500;
   }
   .header-message__input::placeholder {
+    position: absolute;
     font-size: 0.875rem;
     color: #db914d;
   }
@@ -578,4 +602,8 @@ PAGINATOR
   .paginator__pages {
     display: none;
   }
+}
+
+._active-navigate-link {
+  color: #db914d;
 }
